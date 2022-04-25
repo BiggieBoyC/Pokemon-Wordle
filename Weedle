@@ -1,302 +1,545 @@
-def prints(ggen,pgen,gtype,ptype,gevo,pevo):
+def prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo):
     if ggen==pgen:
         print ('Correct generation')
-    if gtype==ptype:
+    if gtype1==ptype1:
         print ('Correct Type')
+    if gtype2!=None:
+        if gtype2==ptype2:
+            print ('Correct Type')
     if gevo==pevo:
         print ('Correct evolutionary Stage')
 def main():
     sum=0
     from random import randrange
     for x in range(1,1000000000000):
-        r=randrange(0,20)
-        pokemon=["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Beedrill","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate"]
+        r=randrange(0,30)
+        pokemon=["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Beedrill","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate","Spearow","Fearow","Ekans","Arbok","Pikachu","Raichu","Sandshrew","Sandslash","Nidoran(male)","Nidoran(female)"]
         l=len(pokemon)
         p=pokemon[r]
         if p=='Bulbasaur':
             pgen=1
-            ptype='grass,poison'
+            ptype1='grass'
+            ptype2='poison'
             pevo='1st Stage'
         if p=='Ivysaur':
             pgen=1
-            ptype='grass,poison'
+            ptype1='grass'
+            ptype2='poison'
             pevo='2nd Stage'
         if p=='Venusaur':
             pgen=1
-            ptype='grass,poison'
+            ptype1='grass'
+            ptype2='poison'
             pevo='3rd Stage'
         if p=='Charmander':
             pgen=1
-            ptype='fire'
+            ptype1='fire'
+            ptype2='None'
             pevo='1st Stage'
         if p=='Charmeleon':
             pgen=1
-            ptype='fire'
+            ptype1='fire'
+            ptype2='None'
             pevo='2nd Stage'
         if p=='Charizard':
             pgen=1
-            ptype='fire,flying'
+            ptype1='fire'
+            ptype2='flying'
             pevo='3rd Stage'
         if p=='Squirtle':
             pgen=1
-            ptype='water'
+            ptype1='water'
+            ptype2='None'
             pevo='1st Stage'
         if p=='Wartortle':
             pgen=1
-            ptype='water'
+            ptype1='water'
+            ptype2='None'
             pevo='2nd Stage'
         if p=='Blastoise':
             pgen=1
-            ptype='water'
+            ptype1='water'
+            ptype2='None'
             pevo='3rd Stage'
         if p=='Caterpie':
             pgen=1
-            ptype='bug'
+            ptype1='bug'
+            ptype2='None'
             pevo='1st Stage'
         if p=='Metapod':
             pgen=1
-            ptype='bug'
+            ptype1='bug'
+            ptype2='None'
             pevo='2nd Stage'
         if p=='Butterfree':
             pgen=1
-            ptype='bug, flying'
+            ptype1='bug'
+            ptype2='flying'
             pevo='3rd Stage'
         if p=='Weedle':
             pgen=1
-            ptype='bug, poison'
+            ptype1='bug'
+            ptype2='poison'
             pevo='1st Stage'
         if p=='Kakuna':
             pgen=1
-            ptype='bug, poison'
+            ptype1='bug'
+            ptype2='poison'
             pevo='2nd Stage'
         if p=='Beedrill':
             pgen=1
-            ptype='bug, poison'
+            ptype1='bug'
+            ptype2='poison'
             pevo='3rd Stage'
         if p=='Pidgey':
             pgen=1
-            ptype='normal, flying'
+            ptype1='normal'
+            ptype2='flying'
             pevo='1st Stage'
         if p=='Pidgeotto':
             pgen=1
-            ptype='normal, flying'
+            ptype1='normal'
+            ptype2='flying'
             pevo='2nd Stage'
         if p=='Pidgeot':
             pgen=1
-            ptype='normal, flying'
+            ptype1='normal'
+            ptype2='flying'
             pevo='3rd Stage'
         if p=='Rattata':
             pgen=1
-            ptype='normal'
+            ptype1='normal'
+            ptype2='None'
             pevo='1st Stage'
         if p=='Raticate':
             pgen=1
-            ptype='normal'
+            ptype1='normal'
+            ptype2='None'
             pevo='2nd Stage'
+        if p=='Spearow':
+            pgen=1
+            ptype1='normal'
+            ptype2='flying'
+            pevo='1st Stage'
+        if p=='Fearow':
+            pgen=1
+            ptype1='normal'
+            ptype2='flying'
+            pevo='2nd Stage'
+        if p=='Ekans':
+            pgen=1
+            ptype1='poison'
+            ptype2='None'
+            pevo='1st Stage'
+        if p=='Arbok':
+            pgen=1
+            ptype1='poison'
+            ptype2='None'
+            pevo='2nd Stage'
+        if p=='Pikachu':
+            pgen=1
+            ptype1='Electric'
+            ptype2='None'
+            pevo='1st Stage'
+        if p=='Raichu':
+            pgen=1
+            ptype1='Electric'
+            ptype2='None'
+            pevo='2nd Stage'
+        if p=='Sandshrew':
+            pgen=1
+            ptype1='ground'
+            ptype2='None'
+            pevo='1st Stage'
+        if p=='Sandslash':
+            pgen=1
+            ptype1='ground'
+            ptype2='None'
+            pevo='2nd Stage'
+        if p=='Nidoran(male)':
+            pgen=1
+            ptype1='poison'
+            ptype2='None'
+            pevo='1st Stage'
+        if p=='Nidoran(female)':
+            pgen=1
+            ptype1='poison'
+            ptype2='None'
+            pevo='1st Stage'
         guess=input('Take your first guess!')
+        if guess=='Give Up':
+            print (p)
+            Continue=input('Do you want to play again?')
+            if Continue=='No':
+                break
         if guess=='Bulbasaur':
             ggen=1
-            gtype='grass,poison'
+            gtype1='grass'
+            gtype2='poison'
             gevo='1st Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Ivysaur':
             ggen=1
-            gtype='grass,poison'
+            gtype1='grass'
+            gtype2='poison'
             gevo='2nd Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Venusaur':
             ggen=1
-            gtype='grass,poison'
+            gtype1='grass'
+            gtype2='poison'
             gevo='3rd Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Charmander':
             ggen=1
-            gtype='fire'
+            gtype1='fire'
+            gtype2='None'
             gevo='1st Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Charmeleon':
             ggen=1
-            gtype='fire'
+            gtype1='fire'
+            gtype2='None'
             gevo='2nd Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Charizard':
             ggen=1
-            gtype='fire,flying'
+            gtype1='fire'
+            gtype2='flying'
             gevo='3rd Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Squirtle':
             ggen=1
-            gtype='water'
+            gtype1='water'
+            gtype2='None'
             gevo='1st Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Wartortle':
             ggen=1
-            gtype='water'
+            gtype1='water'
+            gtype2='None'
             gevo='2nd Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Blastoise':
             ggen=1
-            gtype='water'
+            gtype1='water'
+            gtype2='None'
             gevo='3rd Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Caterpie':
             ggen=1
-            gtype='bug'
+            gtype1='bug'
+            gtype2='None'
             gevo='1st Stage'
-            prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Metapod':
-                ggen=1
-                gtype='bug'
-                gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='bug'
+            gtype2='None'
+            gevo='2nd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Butterfree':
-                ggen=1
-                gtype='bug,flying'
-                gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='bug'
+            gtype2='flying'
+            gevo='3rd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Weedle':
-                ggen=1
-                gtype='bug, poison'
-                gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='bug'
+            gtye2='poison'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Kakuna':
-                ggen=1
-                gtype='bug, poison'
-                gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='bug'
+            gtye2='poison'
+            gevo='2nd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Beedrill':
-                ggen=1
-                gtype='bug, poison'
-                gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='bug'
+            gtye2='poison'
+            gevo='3rd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Pidgey':
-                ggen=1
-                gtype='normal, flying'
-                gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='normal'
+            gtype2='flying'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Pidgeotto':
-                ggen=1
-                gtype='normal, flying'
-                gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='normal'
+            gtype2='flying'
+            gevo='2nd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Pidgeot':
-                ggen=1
-                gtype='normal, flying'
-                gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='normal'
+            gtype2='flying'
+            gevo='3rd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Rattata':
-                ggen=1
-                gtype='normal'
-                gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='normal'
+            gtype2='None'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         if guess=='Raticate':
-                ggen=1
-                gtype='normal'
-                gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+            ggen=1
+            gtype1='normal'
+            gtype2='None'
+            gevo='2nd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Spearow':
+            ggen=1
+            gtype1='normal'
+            gtype2='flying'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Fearow':
+            ggen=1
+            gtype1='normal'
+            gtype2='flying'
+            gevo='2nd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Ekans':
+            ggen=1
+            gtype1='poison'
+            gtye2='None'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Arbok':
+            ggen=1
+            gtype1='poison'
+            gtye2='None'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Pikachu':
+            ggen=1
+            gtype1='electric'
+            gtype2='None'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Raichu':
+            ggen=1
+            gtype1='electric'
+            gtype2='None'
+            gevo='2nd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Sandshrew':
+            ggen=1
+            gtype1='ground'
+            gtype2='None'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Sandslash':
+            ggen=1
+            gtype1='ground'
+            gtype2='None'
+            gevo='2nd Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Nidoran(male)':
+            ggen=1
+            gtype1='poison'
+            gtype2='None'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+        if guess=='Nidoran(female)':
+            ggen=1
+            gtype1='poison'
+            gtype2='None'
+            gevo='1st Stage'
+            prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
         while guess!=p:
             guess=input('Take another guess!')
             sum=sum+1
             if guess=='Bulbasaur':
                 ggen=1
-                gtype='grass,poison'
+                gtype1='grass'
+                gtype2='poison'
                 gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Ivysaur':
                 ggen=1
-                gtype='grass,poison'
+                gtype1='grass'
+                gtype2='poison'
                 gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Venusaur':
                 ggen=1
-                gtype='grass,poison'
+                gtype1='grass'
+                gtype2='poison'
                 gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Charmander':
                 ggen=1
-                gtype='fire'
+                gtype1='fire'
+                gtype2='None'
                 gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Charmeleon':
                 ggen=1
-                gtype='fire'
+                gtype1='fire'
+                gtype2='None'
                 gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Charizard':
                 ggen=1
-                gtype='fire,flying'
+                gtype1='fire'
+                gtype2='flying'
                 gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Squirtle':
                 ggen=1
-                gtype='water'
+                gtype1='water'
+                gtype2='None'
                 gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Wartortle':
                 ggen=1
-                gtype='water'
+                gtype1='water'
+                gtype2='None'
                 gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Blastoise':
                 ggen=1
-                gtype='water'
+                gtype1='water'
+                gtype2='None'
                 gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Caterpie':
                 ggen=1
-                gtype='bug'
+                gtype1='bug'
+                gtype2='None'
                 gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Metapod':
                 ggen=1
-                gtype='bug'
+                gtype1='bug'
+                gtype2='None'
                 gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Butterfree':
                 ggen=1
-                gtype='bug,flying'
+                gtype1='bug'
+                gtype2='flying'
                 gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Weedle':
                 ggen=1
-                gtype='bug, poison'
+                gtype1='bug'
+                gtye2='poison'
                 gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Kakuna':
                 ggen=1
-                gtype='bug, poison'
+                gtype1='bug'
+                gtye2='poison'
                 gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Beedrill':
                 ggen=1
-                gtype='bug, poison'
+                gtype1='bug'
+                gtye2='poison'
                 gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Pidgey':
                 ggen=1
-                gtype='normal, flying'
+                gtype1='normal'
+                gtype2='flying'
                 gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Pidgeotto':
                 ggen=1
-                gtype='normal, flying'
+                gtype1='normal'
+                gtype2='flying'
                 gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Pidgeot':
                 ggen=1
-                gtype='normal, flying'
+                gtype1='normal'
+                gtype2='flying'
                 gevo='3rd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Rattata':
                 ggen=1
-                gtype='normal'
+                gtype1='normal'
+                gtype2='None'
                 gevo='1st Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
             if guess=='Raticate':
                 ggen=1
-                gtype='normal'
+                gtype1='normal'
+                gtype2='None'
                 gevo='2nd Stage'
-                prints(ggen,pgen,gtype,ptype,gevo,pevo)
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Spearow':
+                ggen=1
+                gtype1='normal'
+                gtype2='flying'
+                gevo='1st Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Fearow':
+                ggen=1
+                gtype1='normal'
+                gtype2='flying'
+                gevo='2nd Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Ekans':
+                ggen=1
+                gtype1='poison'
+                gtye2='None'
+                gevo='1st Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Arbok':
+                ggen=1
+                gtype1='poison'
+                gtye2='None'
+                gevo='1st Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Pikachu':
+                ggen=1
+                gtype1='electric'
+                gtype2='None'
+                gevo='1st Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Raichu':
+                ggen=1
+                gtype1='electric'
+                gtype2='None'
+                gevo='2nd Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Sandshrew':
+                ggen=1
+                gtype1='ground'
+                gtype2='None'
+                gevo='1st Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Sandslash':
+                ggen=1
+                gtype1='ground'
+                gtype2='None'
+                gevo='2nd Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Nidoran(male)':
+                ggen=1
+                gtype1='poison'
+                gtype2='None'
+                gevo='1st Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Nidoran(female)':
+                ggen=1
+                gtype1='poison'
+                gtype2='None'
+                gevo='1st Stage'
+                prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
+            if guess=='Give Up':
+                print (p)
+                Continue=input('Do you want to play again?')
+                if Continue=='No':
+                    break
         if guess==p:
             print ('You got it right!')
             print ("It took you",sum+1,"guesses!")

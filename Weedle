@@ -3,9 +3,8 @@ def prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo):
         print ('Correct generation')
     if gtype1==ptype1:
         print ('Correct Type')
-    if gtype2!=None:
-        if gtype2==ptype2:
-            print ('Correct Type')
+    if gtype2!="None" and ptype2=="None":
+        print ('Single-Type Pokemon')
     if gevo==pevo:
         print ('Correct evolutionary Stage')
 def main():

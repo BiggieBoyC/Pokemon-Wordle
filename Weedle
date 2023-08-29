@@ -534,11 +534,6 @@ def main():
                 gtype2='None'
                 gevo='1st Stage'
                 prints(ggen,pgen,gtype1,ptype1,gtype2,ptype2,gevo,pevo)
-            if guess=='Give Up':
-                print (p)
-                Continue=input('Do you want to play again?')
-                if Continue=='No':
-                    break
         if guess=='Give Up':
             print (p)
             Continue=input('Do you want to play again?')
